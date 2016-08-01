@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#EEE"
+                android:minHeight="90dp"
+                android:padding="4dp"
+                tools:ignore="HardcodedText,ContentDescription" >
+
+    <TextView
+        android:id="@+id/account_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="31dp"
+        android:text="Content"
+        android:textSize="21sp" />
+
+    <Button
+        android:id="@+id/delete_account_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:focusable="false"
+        android:text="@string/delete"
+        android:focusableInTouchMode="false"
+        android:padding="16dp" />
+
+</RelativeLayout>

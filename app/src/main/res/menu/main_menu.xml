@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    android:id="@+id/algo"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="nose"
+    app:showAsAction="always">
+
+    <item
+        android:id="@+id/filter"
+        android:title="@string/filter"/>
+    <item
+        android:id="@+id/extra_accounts"
+        android:title="@string/add_extra_accounts"/>
+</menu>

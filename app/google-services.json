@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "812845417471",
+    "firebase_url": "https://pokemonsradar-b8340.firebaseio.com",
+    "project_id": "pokemonsradar-b8340",
+    "storage_bucket": "pokemonsradar-b8340.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:812845417471:android:53c70a11f09ab7a6",
+        "android_client_info": {
+          "package_name": "radar.pokemons.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "812845417471-h1o0v9ne6506obskbjd81k4n7rr1uvcq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFGVLfuBuytlYLTL8W2oXXWJYujKBKHQ8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

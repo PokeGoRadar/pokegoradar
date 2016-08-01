@@ -1,0 +1,13 @@
+*.project
+*.settings
+*.classpath
+.DS_Store
+*.iml
+*.log
+*.gz
+.idea/*
+*.bin
+*.lock
+#general
+**/target/*
+

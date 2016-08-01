@@ -1,0 +1,196 @@
+<resources>
+    <string name="title_activity_main">PokemonsRadar</string>
+    <string name="google_login_radio_button">Google SignIn</string>
+    <string name="pokeclub_radio_button">Pokemon Trainer Club SignIn</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="logme_in">Log Me In!</string>
+    <string name="hint_google_username">Gmail address (including @gmail.com)</string>
+    <string name="hint_google_password">Gmail password</string>
+    <string name="refresh_map">Refresh Map</string>
+    <string name="clear_map">Clear map</string>
+    <string name="scanning">Pokemon Scan in progress, Please wait ...</string>
+    <string name="banner_ad_unit_id">ca-app-pub-9879577400303327/6008191899</string>
+    <string name="no_location">Unable to fund your location</string>
+    <string name="server_down">\"Server seems unstable\"</string>
+    <string name="google_login_description">PokemonGO Radar uses its own accounts so that you don\'t need to provide any credentials! \n\nSometime there is to many users and no Pokemons are shown on the map in that use the Pokemon trainer Login option</string>
+    <string name="trainer_login_description">!!DO NOT USE YOUR OFFICIAL ACCOUNT!!\n\nCreate a separate account at https://www.pokemon.com/us/pokemon-trainer-club/ just for this app and log-in with it.</string>
+
+    <string name="gps_not_enabled">Failed to use the location service, please make sure you have authorize this app to use the location (in the privacy and security settings)</string>
+    <string name="auto_signing">PokeRadar Login</string>
+    <string name="pokemon_club_login">Pokemon Trainer login</string>
+    <string name="hint_trainer_username">Pokemon Trainer Club username</string>
+    <string name="hint_trainer_password">Pokemon Trainer Club Password</string>
+    <string name="wait_for_location">Wait while we retrieve your location</string>
+    <string name="uncheck_all">Unselect all</string>
+    <string name="check_all">Select all</string>
+    <string name="activity_filter_title">Pokemon Filter</string>
+    <string name="save">Save</string>
+    <string name="filter">Pokemon filter</string>
+    <string name="server_status">Login server status: </string>
+    <string name="working">Working !</string>
+    <string name="server_not_working">Seems down..</string>
+    <string name="server_unstable">Seems unstable..</string>
+    <string name="selected">Selected:</string>
+    <string name="twitter_link">Visit our https://twitter.com/PokemonGORadar1 for updates on our server status</string>
+    <string name="add">Add</string>
+    <string name="delete">Delete</string>
+    <string name="creds_not_valid">The username or password are not valid (or PokemonGO servers down?)</string>
+    <string name="add_extra_account_title">Add Extra Accounts</string>
+    <string name="add_extra_accounts">Add Extra Accounts</string>
+    <string name="duplicate_account">You already have added this account</string>
+
+    <string-array name="pokemons">
+        <item>Bulbasaur</item>
+        <item>Ivysaur</item>
+        <item>Venusaur</item>
+        <item>Charmander</item>
+        <item>Charmeleon</item>
+        <item>Charizard</item>
+        <item>Squirtle</item>
+        <item>Wartortle</item>
+        <item>Blastoise</item>
+        <item>Caterpie</item>
+        <item>Metapod</item>
+        <item>Butterfree</item>
+        <item>Weedle</item>
+        <item>Kakuna</item>
+        <item>Beedrill</item>
+        <item>Pidgey</item>
+        <item>Pidgeotto</item>
+        <item>Pidgeot</item>
+        <item>Rattata</item>
+        <item>Raticate</item>
+        <item>Spearow</item>
+        <item>Fearow</item>
+        <item>Ekans</item>
+        <item>Arbok</item>
+        <item>Pikachu</item>
+        <item>Raichu</item>
+        <item>Sandshrew</item>
+        <item>Sandslash</item>
+        <item>Nidoran♀</item>
+        <item>Nidorina</item>
+        <item>Nidoqueen</item>
+        <item>Nidoran♂</item>
+        <item>Nidorino</item>
+        <item>Nidoking</item>
+        <item>Clefairy</item>
+        <item>Clefable</item>
+        <item>Vulpix</item>
+        <item>Ninetales</item>
+        <item>Jigglypuff</item>
+        <item>Wigglytuff</item>
+        <item>Zubat</item>
+        <item>Golbat</item>
+        <item>Oddish</item>
+        <item>Gloom</item>
+        <item>Vileplume</item>
+        <item>Paras</item>
+        <item>Parasect</item>
+        <item>Venonat</item>
+        <item>Venomoth</item>
+        <item>Diglett</item>
+        <item>Dugtrio</item>
+        <item>Meowth</item>
+        <item>Persian</item>
+        <item>Psyduck</item>
+        <item>Golduck</item>
+        <item>Mankey</item>
+        <item>Primeape</item>
+        <item>Growlithe</item>
+        <item>Arcanine</item>
+        <item>Poliwag</item>
+        <item>Poliwhirl</item>
+        <item>Poliwrath</item>
+        <item>Abra</item>
+        <item>Kadabra</item>
+        <item>Alakazam</item>
+        <item>Machop</item>
+        <item>Machoke</item>
+        <item>Machamp</item>
+        <item>Bellsprout</item>
+        <item>Weepinbell</item>
+        <item>Victreebel</item>
+        <item>Tentacool</item>
+        <item>Tentacruel</item>
+        <item>Geodude</item>
+        <item>Graveler</item>
+        <item>Golem</item>
+        <item>Ponyta</item>
+        <item>Rapidash</item>
+        <item>Slowpoke</item>
+        <item>Slowbro</item>
+        <item>Magnemite</item>
+        <item>Magneton</item>
+        <item>Farfetch\'d</item>
+        <item>Doduo</item>
+        <item>Dodrio</item>
+        <item>Seel</item>
+        <item>Dewgong</item>
+        <item>Grimer</item>
+        <item>Muk</item>
+        <item>Shellder</item>
+        <item>Cloyster</item>
+        <item>Gastly</item>
+        <item>Haunter</item>
+        <item>Gengar</item>
+        <item>Onix</item>
+        <item>Drowzee</item>
+        <item>Hypno</item>
+        <item>Krabby</item>
+        <item>Kingler</item>
+        <item>Voltorb</item>
+        <item>Electrode</item>
+        <item>Exeggcute</item>
+        <item>Exeggutor</item>
+        <item>Cubone</item>
+        <item>Marowak</item>
+        <item>Hitmonlee</item>
+        <item>Hitmonchan</item>
+        <item>Lickitung</item>
+        <item>Koffing</item>
+        <item>Weezing</item>
+        <item>Rhyhorn</item>
+        <item>Rhydon</item>
+        <item>Chansey</item>
+        <item>Tangela</item>
+        <item>Kangaskhan</item>
+        <item>Horsea</item>
+        <item>Seadra</item>
+        <item>Goldeen</item>
+        <item>Seaking</item>
+        <item>Staryu</item>
+        <item>Starmie</item>
+        <item>Mr. Mime</item>
+        <item>Scyther</item>
+        <item>Jynx</item>
+        <item>Electabuzz</item>
+        <item>Magmar</item>
+        <item>Pinsir</item>
+        <item>Tauros</item>
+        <item>Magikarp</item>
+        <item>Gyarados</item>
+        <item>Lapras</item>
+        <item>Ditto</item>
+        <item>Eevee</item>
+        <item>Vaporeon</item>
+        <item>Jolteon</item>
+        <item>Flareon</item>
+        <item>Porygon</item>
+        <item>Omanyte</item>
+        <item>Omastar</item>
+        <item>Kabuto</item>
+        <item>Kabutops</item>
+        <item>Aerodactyl</item>
+        <item>Snorlax</item>
+        <item>Articuno</item>
+        <item>Zapdos</item>
+        <item>Moltres</item>
+        <item>Dratini</item>
+        <item>Dragonair</item>
+        <item>Dragonite</item>
+        <item>Mewtwo</item>
+        <item>Mew</item>
+    </string-array>
+</resources>

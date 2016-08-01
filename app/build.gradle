@@ -1,0 +1,63 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "radar.pokemons.com"
+        minSdkVersion 19
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            zipAlignEnabled true
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    productFlavors {
+        lite {
+            resValue "string", "app_name", "Pokemons Radar - for Pokemon GO"
+            applicationId = 'radar.pokemons.com'
+            versionCode 10
+            versionName = "1.10"
+        }
+        pro {
+            resValue "string", "app_name", "Pokemons Radar - for Pokemon GO PRO"
+            applicationId = 'pro.radar.pokemons.com'
+            versionCode 1
+            versionName = "1.0"
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile ('com.google.android.gms:play-services-maps:9.2.1')
+    compile ('com.google.android.gms:play-services-location:9.2.1')
+    compile ('com.android.support:appcompat-v7:23.2.1')
+    compile ('com.android.support:design:23.2.1')
+    compile ('joda-time:joda-time:2.9.4')
+    compile ('com.google.firebase:firebase-ads:9.2.1')
+    compile ('com.android.support:multidex:1.0.1')
+    //compile files('libs/PokeGOAPI-Java_bundle-0.0.1-SNAPSHOT.jar')
+    //compile ('cocom.pok.api:pokeapi:1.0') {
+    //exclude group: 'com.squareup.okhttp3', module: 'okhttp'
+    //exclude group: 'com.squareup.okio', module: 'okio'
+    //}
+    /*compile ('com.github.svarzee:gpsoauth-java:v0.2.0'){
+        exclude module: 'okhttp'
+    }*/
+}
+apply plugin: 'com.google.gms.google-services'
+//apply plugin: "maven"

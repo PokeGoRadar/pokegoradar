@@ -1,0 +1,60 @@
+<RelativeLayout
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:background="?colorPrimary"/>
+
+    <RelativeLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/uncheck_all_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/uncheck_all"/>
+
+        <Button
+            android:id="@+id/check_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/uncheck_all_btn"
+            android:text="@string/check_all"/>
+
+        <TextView
+            android:id="@+id/selected_pokemon_count_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/check_all"
+            android:text="@string/selected"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/count_selected_pokemon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/selected_pokemon_count_txt"
+            android:text="151"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/pokemons_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/buttons"/>
+</RelativeLayout>
