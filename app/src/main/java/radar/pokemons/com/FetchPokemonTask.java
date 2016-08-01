@@ -1,5 +1,6 @@
 package radar.pokemons.com;
 
+import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
 
@@ -21,12 +22,14 @@ public class FetchPokemonTask implements Callable {
   private double lon;
   private Handler handler;
   private TaskBundle taskBundle;
+  private Context context;
 
-  public FetchPokemonTask(TaskBundle taskBundle, double lat, double longi, Handler handler) {
+  public FetchPokemonTask(Context context, TaskBundle taskBundle, double lat, double longi, Handler handler) {
     this.lon = longi;
     this.lat = lat;
     this.handler = handler;
     this.taskBundle = taskBundle;
+    this.context = context;
   }
 
   @Override
@@ -44,12 +47,14 @@ public class FetchPokemonTask implements Callable {
           List<CatchablePokemon> pokemons = taskBundle.getPokemonGo().getMap().getCatchablePokemon();
           Message completeMessage = handler.obtainMessage(MapsActivity.MESSAGE_DISPLAY_POKE, pokemons);
           completeMessage.sendToTarget();
+          Thread.sleep(6000);
           return "OK";
         } catch (LoginFailedException e) {
           // Maybe token is expired ? attempt new login
           AuthInfo authInfo = new PTCLogin(taskBundle.getOkHttpClient()).login(taskBundle.getAccount().getUsername(), taskBundle.getAccount().getPassword());
+          taskBundle.getAccount().setToken(authInfo.getToken().getContents());
+          Settings.updateAccount(context, taskBundle.getAccount());
           taskBundle.setPokemonGo(new PokemonGo(authInfo, taskBundle.getOkHttpClient()));
-        } finally {
           Thread.sleep(6000);
         }
         count++;

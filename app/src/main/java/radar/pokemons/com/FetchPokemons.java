@@ -66,7 +66,7 @@ public class FetchPokemons extends AsyncTask<LatLng, List<CatchablePokemon>, Str
         try {
           LatLng latLng = scanPoints.get(i);
           TaskBundle taskBundle = taskBundles.get(i % taskBundles.size());
-          FetchPokemonTask test = new FetchPokemonTask(taskBundle, latLng.latitude, latLng.longitude, handler);
+          FetchPokemonTask test = new FetchPokemonTask(context, taskBundle, latLng.latitude, latLng.longitude, handler);
           completionService.submit(test);
         } catch (Exception e) {
           e.printStackTrace();
@@ -128,6 +128,8 @@ public class FetchPokemons extends AsyncTask<LatLng, List<CatchablePokemon>, Str
         TaskBundle taskBundle = new TaskBundle();
         taskBundle.setPokemonGo(pokemon);
         taskBundles.add(taskBundle);
+        taskBundle.setAccount(account);
+        taskBundle.setOkHttpClient(okHttpClient);
       } catch (Exception e) {
         e.printStackTrace();
       }

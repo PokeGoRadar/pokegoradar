@@ -54,7 +54,7 @@ public class AccountsSettingsActivity extends AppCompatActivity {
   private Button addAccountBtn;
   private Toolbar toolbar;
   final OkHttpClient http = new OkHttpClient();
-  Set<Account> accounts = new HashSet<>();
+  List<Account> accounts = new ArrayList<>();
   OkHttpClient okHttpClient = new OkHttpClient();
 
   @Override
@@ -72,7 +72,7 @@ public class AccountsSettingsActivity extends AppCompatActivity {
     getSupportActionBar().setTitle(getString(R.string.add_extra_account_title));
     getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-    accounts = Settings.getAccounts(getApplicationContext());
+    accounts = new ArrayList<>(Settings.getAccounts(getApplicationContext()));
 
     mRecyclerView.setHasFixedSize(true);
 
@@ -80,13 +80,13 @@ public class AccountsSettingsActivity extends AppCompatActivity {
     mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
     // create an Object for Adapter
-    mAdapter = new AccountsAdapter(new ArrayList<>(accounts), new AccountsAdapter.AccountAdapterListener() {
+    mAdapter = new AccountsAdapter(accounts, new AccountsAdapter.AccountAdapterListener() {
 
       @Override
       public void onAccountDelete(int index) {
         accounts.remove(index);
         mAdapter.notifyDataSetChanged();
-        Settings.saveAccounts(getApplicationContext(), accounts);
+        Settings.saveAccounts(getApplicationContext(), new HashSet<>(accounts));
       }
     });
 
@@ -110,7 +110,7 @@ public class AccountsSettingsActivity extends AppCompatActivity {
             account.setToken(token);
             accounts.add(account);
             mAdapter.notifyDataSetChanged();
-            Settings.saveAccounts(getApplicationContext(), accounts);
+            Settings.saveAccounts(getApplicationContext(), new HashSet<Account>(accounts));
           }
         } else {
           Toast.makeText(getApplicationContext(), getString(R.string.duplicate_account), Toast.LENGTH_LONG).show();
